@@ -1,0 +1,368 @@
+body {
+    background-color: #8CC461;
+}
+
+.score-board{
+    background-color: red;
+    /* margin:auto; */
+    margin-left:2rem;
+    width:80%;
+}
+
+
+
+
+
+
+/* .score-board {
+    border: 2px solid white;
+    color: white;
+    border-radius: 10px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    width: 60vw;
+    margin-left: 20%;
+    margin-top: 40px;
+}
+
+.game-name {
+    font-size: 40px;
+    padding-left: 10px;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.score {
+    display: flex;
+    justify-content: space-between;
+    width: 20vw;
+    padding-right: 20px;
+    line-height: 2em;
+}
+
+.score-card {
+    border: 2px solid none;
+    padding: 5px 10px;
+    line-height: 2rem;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    text-align: center;
+    height: 7rem;
+    width: 7rem;
+    font-size: 1.2rem;
+}
+
+.name-of-user {
+    color: gray;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.proper-score {
+    color: black;
+    font-weight: 700;
+    padding: 20px;
+    font-size: 4rem;
+} */
+
+
+
+.bottombuttons {
+    display: flex;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    gap:10px;
+
+    .rulesButton {
+        border: 2px solid white;
+        border-radius: 10px;
+        padding: 10px 10px;
+        color:white;
+        font-size: 1rem;
+        background-color: transparent;
+        cursor: pointer;
+        font-weight :700;
+    }
+
+    a{
+        text-decoration: none;
+    }
+
+    .nextButton {
+        border: 2px solid white;
+        border-radius: 10px;
+        padding: 10px 10px;
+        color:white;
+        font-size: 1rem;
+        background-color: transparent;
+        cursor: pointer;
+        font-weight :700;
+        display: none;
+    }
+}
+
+
+.rules-wraper {
+    display: none;
+    border: 10px solid white;
+    padding: 0px;
+    position: fixed;
+    right: 40px;
+    bottom: 13%;
+    background-color: #004429;
+    box-sizing: border-box;
+    border-radius: 20px;
+    width: 20vw;
+
+    h2 {
+        color: white;
+        padding-top: 10px;
+        text-align: center;
+        margin-top: 0px;
+        margin-bottom: 0px;
+
+        .close-button {
+            color: white;
+            cursor: pointer;
+            background-color: red;
+            border: 7px solid white;
+            border-radius: 50%;
+            font-size: 50px;
+            width: 70px;
+            padding-left: 2px;
+            position: fixed;
+            right: 10px;
+            bottom: 60%;
+        }
+    }
+
+    .points-container {
+        /* line-height: 20px; */
+        padding-left: 40px;
+        padding-right: 20px;
+        padding-bottom: 0px;
+        margin-bottom: 0px;
+        list-style-type: square;
+    }
+
+    .rule-points {
+        color: white;
+        padding-bottom: 20px;
+        /* line-height: 50px;    how to use line height between the points as of now I used padding in the above line  */
+    }
+}
+
+
+
+.game-board {
+
+    .gesture-wraper {
+        position: absolute;
+        display: flex;
+        margin-left: 20rem;
+        margin-top: 3rem;
+        height: 25rem;
+        width: 50rem;
+
+        .logo-wrapper {
+            position: absolute;
+        }
+
+        .button {
+            background-repeat: no-repeat;
+            background-position: center;
+            position: absolute;
+            height: 7rem;
+            width: 7rem;
+            border-radius: 4rem;
+            margin-top: 1.5rem;
+            margin-left: 1.7rem;
+            border: none;
+        }
+
+        #stone-logo {
+            margin-top: 2rem;
+            margin-left: 8rem;
+            z-index: 5;
+            button {
+                background-image: url(./stoneimg.png);
+            }
+        }
+
+        #paper-logo {
+            margin-top: 2rem;
+            margin-left: 30rem;
+            z-index: 5;
+
+            button {
+                background-image: url(./paperimg.png);
+            }
+        }
+
+        #scissor-logo {
+            margin-top: 15rem;
+            margin-left: 19rem;
+            z-index: 5;
+            button {
+                background-image: url(./seissorimg.png);
+            }
+        }
+
+        #stone-img {
+            /* background-image: url(./stoneimg.png); */
+        }
+
+        #line1 {
+            position: absolute;
+            margin-top: 15%;
+            margin-left: 35%;
+            height: 10px;
+            width: 30%;
+            background-color: green;
+            /* transform: rotate(0deg); */
+        }
+
+        #line2 {
+            position: absolute;
+            margin-top: 25%;
+            margin-left: 50%;
+            height:10px;
+            width: 200px;
+            background-color: green;
+            transform: rotate(130deg);
+        }
+
+        #line3 {
+            position: absolute;
+            margin-top: 25%;
+            margin-left: 21%;
+            height: 10px;
+            width: 200px;
+            background-color: green;
+            transform: rotate(50deg);
+        }
+
+        .continue-button {
+            background-color: cyan;
+            position: absolute;
+            margin-left: 21rem;
+            margin-top: 19rem;
+            display: none;
+        }
+    }
+
+
+    .resulting-box {
+
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        margin-left: 20rem;
+        margin-top: 3rem;
+        /* background-color: red; */
+        height: 25rem;
+        width: 50rem;
+        display: none;
+        border: 2px solid none;
+
+        .winner{
+            display: none;
+            height: 30vh;
+            z-index: 4;
+            position: absolute;
+            margin-left: 5rem;             
+        }
+        #data{
+            gap: 60%;
+            justify-content: space-around;
+            display: flex;
+            position: absolute;
+            margin-top: 4rem;
+            color: white;
+            margin-left: 10%;
+            width: 40rem;
+            font-weight: 800;
+            font-size: larger;
+        }
+        .choice {
+            /* display: none; */
+            position: absolute;
+            margin-top: 7rem;
+        }
+
+        .bgseleted {
+            position: absolute;
+            background-image: url(./stonebg.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 10rem 10rem;
+            height: 5rem;
+            padding: 3rem;
+            z-index: 3;
+            margin-left: 2.6rem;
+            margin-top: 1rem;
+        }
+
+        .winnerbg {
+            position: absolute;
+            height: 16rem;
+            width: 16rem;
+            top: -1.6rem;
+            left: 0.1rem;
+            z-index: 1;
+            transition-timing-function: ease-in;
+        }
+        #userwinnercircle{
+            display: none;
+            /* left: 1.1rem; */
+        }
+        #systemwinnercircle{
+            display: none;
+        }
+        #system-choice {
+            left: 32rem;
+        }
+    }
+}
+
+
+#won-result {
+    background-color: yellow;
+    display: none;
+    position: absolute;
+    text-align: center;
+    top: 25rem;
+    align-items: center;
+    left: 41rem;
+    z-index: 6;
+    color: white;
+    h1 {
+        position: absolute;
+        width: 11rem;
+    }
+
+    p {
+        position: absolute;
+        top: 3rem;
+        width: 11rem;
+        font-weight: 900;
+    }
+
+    #PlayAgainButton{
+        position: absolute;
+        top: 6rem;
+        width: 10rem;
+        padding: 5px 20px;
+        color:gray;
+        padding: 10px 30px; 
+        background-color: white;
+        border-radius: 10px;
+        border:none;
+    }
+}

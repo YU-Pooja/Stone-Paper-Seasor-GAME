@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Stone Paper Scissors </title>
+</head>
+
+<body>
+    <div class="score-board">
+        <div class="game-name">
+            <span>ROCK</span>
+            <span>PAPER</span>
+            <span>SCISSORS</span>
+        </div>
+        <div class="score">
+            <div class="score-card" id="computer-score">
+                <span class="name-of-user">COMPUTER <br>SCORE</span>
+                <span class="proper-score" id="storage-computer-score">0</span>
+            </div>
+            <div class="score-card" id="system-score">
+                <span class="name-of-user">YOUR <br> SCORE</span>
+                <span class="proper-score" id="your-computer-score">0</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="game-board">
+        <div id="3_gestures" class="gesture-wraper">
+            <div id="stone-logo" class="logo-wrapper">
+                <button onclick="clicked('stone')" id="stone-img" class="button"></button>
+                <img class="hi" src="stonebg.png" alt="stonebg-color" />
+            </div>
+            <div id="paper-logo" class="logo-wrapper">
+                <button onclick="clicked('paper')" id="paper-img" class="button"></button>
+                <img class="hi" src="paperbg.png" alt="stonebg-color" />
+            </div>
+            <div id="scissor-logo" class="logo-wrapper">
+                <button onclick="clicked('seissor')" id="scissor-img" class="button"></button>
+                <img class="hi" src="seissorbg.png" alt="-color" />
+            </div>
+            <div id="lines">
+                <hr id="line1" />
+                <hr id="line2" />
+                <hr id="line3" />
+            </div>
+            <div id="continue">
+                <a href="./Won-page.html">
+                    <button onclick="continueClicked()" id="continuebutton" class="continue-button">CONTINUE</button>
+                </a>
+            </div>
+        </div>
+
+        <div id="decider-box" class="resulting-box">
+            <div id="data">
+                <p>YOU PICKED</p>
+                <p>PC PICKED</p>
+            </div>
+            <div class="choice" id="user-choice">
+                <img class="bgseleted" id="usercircle" src="stoneimg.png" alt="default-bg" />
+                <img class="winnerbg" id="userwinnercircle" src="winnerbg.png" alt="winner-circle" />
+                <img src="pooa.gif" class="winner" id="user-own" alt="img here"> 
+            </div>
+            <div class="choice" id="system-choice">
+                <img class="bgseleted" id="systemcircle" src="stoneimg.png" alt="default-bg" />
+                <img class="winnerbg" id="systemwinnercircle" src="winnerbg.png" alt="winner-circle" />
+                <img src="pooa.gif" class="winner" id="system-own" alt="img here"> 
+            </div>
+        </div>
+
+    </div>
+    <div id="won-result">
+        <h1 class="tieup">TIE UP</h1>
+        <p>AGAINEST PC</p>
+        <a href="./index.html" class="play_again"><button id="PlayAgainButton">PLAY AGAIN</button></a>
+    </div>
+
+    <div class="bottombuttons">
+        <button onclick="showOrHideRules()" class="rulesButton">RULES</button>
+        <a href="./Won-page.html">
+            <button id="ButtonNext" class="nextButton">NEXT</button>
+        </a>
+    </div>
+    <div class="rules-wraper" id="rule_wraper">
+        <h2>Game Rules
+            <button class="close-button" onclick="showOrHideRules()">×</button>
+        </h2>
+
+        <ul class="points-container">
+            <li class="rule-points">Rock beats scissors, scissors beat paper, and paper beats rock.</li>
+            <li class="rule-points">Agree ahead of time whether you’ll count off “rock, paper, scissors, shoot” or just
+                “rock, paper, scissors.”</li>
+            <li class="rule-points">Use rock, paper, scissors to settle minor decisions or simply play to pass the time
+            </li>
+            <li class="rule-points">If both players lay down the same hand, each player lays down another hand</li>
+        </ul>
+
+    </div>
+    <script rel="javascript" src="index.js"></script>
+</body>
+
+</html>
